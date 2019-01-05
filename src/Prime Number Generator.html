@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>
+Prime Number Generator
+</title>
+</head>
+<body>
+
+<script type=text/javascript>
+
+alert("Start program:");
+
+var intChecking = 2; //Is this number prime?
+var factor1 = 1; //Check this factor.
+var factor2 = 1; //Check this factor too.
+var primeCheck = 1; //1 if prime, 0 if not.
+
+function checkInt(){
+
+	factor1 = 1;
+	factor2 = 1;
+	primeCheck = 1;
+
+		do{
+			
+			do{
+			
+				if(factor1 * factor2 == intChecking){
+				primeCheck = 0;
+				}
+				
+				factor2++;
+			
+			}while(factor2 < intChecking)
+			
+			factor1++;
+			factor2 = 1;
+									
+		}while(factor1 < intChecking)
+
+	if(primeCheck == 1){
+	document.write(intChecking + "-----");}
+	intChecking++;
+	
+}
+
+var intervalID = window.setInterval(checkInt,1);
+
+</script>
+
+</body>
+</html>
